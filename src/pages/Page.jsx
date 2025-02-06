@@ -7,6 +7,7 @@ import Instagram from '../components/instagram/Instagram';
 import Pi from '../components/pi/Pi';
 import Google from '../components/google/Google';
 import { readDB } from '../backend';
+import Banner from '../components/Banner';
 
 const Page = ({ category }) => {
 
@@ -25,6 +26,7 @@ const Page = ({ category }) => {
 
   return (
     <div>
+      <Banner/>
       {category ==='activity' && <h1>Activity</h1> }
       {category ==='location' && <h1>Location</h1> }
       {category ==='interests' && <h1>Interests</h1> }

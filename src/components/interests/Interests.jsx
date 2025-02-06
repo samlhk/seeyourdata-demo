@@ -43,7 +43,6 @@ const Interests = ({ db, isHome }) => {
           description='Your topics, determined by online platforms, refresh to see more topics'
           sources={['Instagram topics: "A collection of topics determined by your activity on Instagram that is used to create recommendations for you in different areas of Instagram, such as Reels, feed recommendations, and Shopping"']}
         />
-        <Summary db = { db } category='Interests'/>
         <InterestsWordCloud db = { db } type='searchedTopics' title='Topics you have searched for'
           description='Topics from your searches through the online platforms, generated with LDA topic modelling'
           sources={['Searches on Google products: YouTube, Chrome, Flights, Hotels, Image Search, Search, Shopping']}
@@ -52,6 +51,7 @@ const Interests = ({ db, isHome }) => {
           description={'Topics from things you have viewed through online platforms, generated with LDA topic modelling'}
           sources={['Views through Google products: Ads, Chrome']}
         />
+        <Summary db = { db } category='Interests'/>
       </>
   )
 }

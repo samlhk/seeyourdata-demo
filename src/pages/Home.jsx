@@ -12,6 +12,7 @@ import Card from '../components/Card';
 import Google from '../components/google/Google';
 import InfoCard from '../components/InfoCard';
 import { getDBPath, readDB } from '../backend';
+import Banner from '../components/Banner';
 const { parse } = require('node-html-parser');
 const lda = require('lda');
 const Sentiment = require('sentiment');
@@ -54,6 +55,7 @@ const Home = () => {
 
   return (
     <div>
+      <Banner/>
       <h1>Home</h1>
       <div className='home-container'>
 
