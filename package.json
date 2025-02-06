@@ -1,0 +1,83 @@
+{
+  "name": "seeyourdata-local",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@langchain/core": "^0.1.18",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "@uiw/react-heat-map": "^2.3.2",
+    "@uiw/react-tooltip": "^4.22.3",
+    "@xenova/transformers": "^2.17.2",
+    "bootstrap": "^5.3.3",
+    "chart.js": "^4.4.6",
+    "chartjs": "^0.3.24",
+    "dompurify": "^3.2.2",
+    "jszip": "^3.10.1",
+    "langchain": "^0.1.7",
+    "lda": "^0.2.0",
+    "leaflet": "^1.9.4",
+    "marked": "^15.0.3",
+    "maxmind": "^4.3.23",
+    "node-html-parser": "^6.1.13",
+    "node-llama-cpp": "^2.8.5",
+    "path": "^0.12.7",
+    "react": "^16.14.0",
+    "react-bootstrap": "^2.10.5",
+    "react-chartjs-2": "^5.2.0",
+    "react-dom": "^16.14.0",
+    "react-icons": "^5.3.0",
+    "react-leaflet": "^2.7.0",
+    "react-router-dom": "^6.28.0",
+    "react-scripts": "5.0.1",
+    "react-tooltip": "^5.28.0",
+    "react-wordcloud": "^1.2.7",
+    "sentiment": "^5.0.2",
+    "shuffle-seed": "^1.1.6",
+    "snowball": "^0.3.1",
+    "text-encoding": "^0.7.0",
+    "underscore": "^1.13.7"
+  },
+  "overrides": {
+    "@langchain/core": "^0.1.18"
+  },
+  "main": "public/electron.js",
+  "scripts": {
+    "start": "DISABLE_ESLINT_PLUGIN=false react-scripts start",
+    "build": "NODE_ENV=prod react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "electron": "NODE_ENV=dev electron .",
+    "package": "electron-packager . --platform=linux --arch=x64 --overwrite"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "electron": "^33.2.0",
+    "electron-packager": "^17.1.2",
+    "electron-rebuild": "^3.2.9"
+  },
+  "build": {
+    "files": [
+      "src/**/*"
+    ]
+  },
+  "homepage": "./"
+}

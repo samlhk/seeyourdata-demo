@@ -1,0 +1,65 @@
+button {
+    border: solid black 2px;
+    width: fit-content;
+  }
+  
+button:hover {
+  color: white;
+  background: rgb(67, 67, 67);
+}
+
+button.highlighted {
+  background: black;
+  color: white;
+}
+
+.success {
+  color: green;
+}
+
+.warning {
+  color: red;
+}
+
+.card-container {
+  position: fixed;
+  z-index: 9999;
+  background: #b3ebf2;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  overscroll-behavior: contain;
+  left: 10vw;
+  width: 80vw;
+  top: 10vh;
+  height: 70vh;
+  border-radius: 1rem;
+  border: solid 5px black;
+  padding: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.card-container::-webkit-scrollbar {
+  display: none;
+}
+
+.card-container h5 {
+  margin-top: 2rem;
+}
+
+.exit-button {
+  position: sticky;
+  bottom: 0;
+  float: right;
+}
+
+.info-button {
+  display: flex;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  padding: 0.1rem 1rem;
+}
+
+.info-button h4 {
+  margin: 0;
+}
+  
