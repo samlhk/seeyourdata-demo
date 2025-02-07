@@ -71,4 +71,8 @@ button.highlighted {
   justify-content: space-around;
   align-items: center;
 }
+
+.important {
+  color: orangered;
+}
   
