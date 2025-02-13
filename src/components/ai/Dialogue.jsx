@@ -4,6 +4,7 @@ import DOMPurify from 'dompurify';
 import InfoCard from '../InfoCard';
 import Prompter from './Prompter';
 import { readChats } from '../../backend';
+import { demoWarning } from '../../pages/Home';
 
 const Dialogue = ({ db, isHome }) => {
 
@@ -81,7 +82,7 @@ const Dialogue = ({ db, isHome }) => {
               <option disabled={true} defaultValue={true} value={-1}>Select past chats</option>
               { allChats.map((chat, index) => <option value={index}>{chat[1][0].slice(0, 50) + '...'}</option>) }
             </select>
-            <button disabled={humanChats.length === 0}>Delete Chat</button>
+            <button onClick={demoWarning} disabled={humanChats.length === 0}>Delete Chat</button>
           </div>}
         </div>
 
@@ -98,7 +99,7 @@ const Dialogue = ({ db, isHome }) => {
         }
         <div className='prompt-container'>
           <textarea name="prompt" rows="2" value={ prompt } onChange={(e) => { setPrompt(e.target.value) }}></textarea>
-          <button className='mt-1' disabled={ aiChats[aiChats.length - 1] === generatingPrompt }>Send</button>
+          <button onClick={demoWarning} className='mt-1' disabled={ aiChats[aiChats.length - 1] === generatingPrompt }>Send</button>
         </div>
       </div> : <></>
   )

@@ -4,20 +4,16 @@ import InfoCard from './InfoCard'
 const Banner = () => {
   return (
     <div className='banner'>
-      <strong>This is a demo site with synthetic data for evaluation, it would be great if you could fill in this survey: <a href='https://forms.office.com/e/dpDWFVCT2U' target='_blank'>https://forms.office.com/e/dpDWFVCT2U</a>, thanks!</strong>
+      <strong>This is a demo site with synthetic data for evaluation, it would be great if you could fill in this survey: <a href='https://forms.office.com/e/dpDWFVCT2U' target='_blank'>https://forms.office.com/e/dpDWFVCT2U</a>, thanks!<br/>
+      Please use a computer or landscape mode for the best experience</strong>
       <InfoCard
-        title='Important, please read me'
+        title='Learn more'
         content={
           <>
-            <div className='important'>
-              <h5>Important</h5>
-              The site is designed as a desktop app, so please use a computer or a large screen for the best experience.<br/>
-              The upload button, chatbot and summary generation do not work and it is normal, please see explanation below.<br/>
-            </div>
             <h5>Welcome</h5>
             This is a demo site for the app See Your Data: A Tool to Discover What Online Platforms Know About You<br/>
             See Your Data is a desktop app that runs on your computer directly due to privacy reasons, so your data never leaves your computer<br/>
-            This site is populated with <strong>synthetic data of a fake user persona</strong> for the purpose of rapid evaluation There is no meaning attached to any of the data and parts of it is generated with AI<br/>
+            This site is populated with <strong>synthetic data of a fake user persona</strong> for the purpose of rapid evaluation, there is no meaning attached to any of the data and parts of it is generated with AI<br/>
             Some features, such as uploading your own data and interacting with the chatbot are disabled If you are interested in seeing what insights the app can find from your own data, please visit <a href='https://github.com/samlhk/seeyourdata-local' target='_blank'>https://github.com/samlhk/seeyourdata-local</a> for dowload instructions.
             <h5>Evaluation survey</h5>
             We would greatly appreciate it if you could fill in an anonymous survey to tell us what you feel about the app <a href='https://forms.office.com/e/dpDWFVCT2U' target='_blank'>https://forms.office.com/e/dpDWFVCT2U</a><br/>

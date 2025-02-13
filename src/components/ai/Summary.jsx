@@ -3,6 +3,7 @@ import InfoCard from '../InfoCard';
 import { marked } from 'marked';
 import DOMPurify from 'dompurify';
 import { readChats } from '../../backend';
+import { demoWarning } from '../../pages/Home';
 
 const Summary = ({ db, category }) => {
 
@@ -38,7 +39,7 @@ const Summary = ({ db, category }) => {
       />
       <div className='filter-bar'>
         <div></div>
-        <button disabled={summary === generatingPrompt}>Generate summary</button>
+        <button onClick={demoWarning} disabled={summary === generatingPrompt}>Generate summary</button>
         <div></div>
       </div>
       <div className={summary === generatingPrompt ? 'flashing' : ''} dangerouslySetInnerHTML={{__html: summary}}/>

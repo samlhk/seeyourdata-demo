@@ -8,12 +8,11 @@ import Pi from '../components/pi/Pi';
 import Google from '../components/google/Google';
 import { readDB } from '../backend';
 import Banner from '../components/Banner';
+import NavBar from '../components/NavBar';
 
 const Page = ({ category }) => {
 
   const [db, setDB] = useState();
-
-  const navigate = useNavigate();
 
   useEffect(() => {
     fetchDB();
@@ -27,22 +26,17 @@ const Page = ({ category }) => {
   return (
     <div>
       <Banner/>
-      {category ==='activity' && <h1>Activity</h1> }
-      {category ==='location' && <h1>Location</h1> }
-      {category ==='interests' && <h1>Interests</h1> }
-      {category ==='pi' && <h1>Personal Information</h1> }
-      {category ==='instagram' && <h1>Instagram</h1> }
-      {category ==='google' && <h1>Google</h1> }
-      <nav>
-        <button onClick={() => navigate('/')}>Home</button>
-      </nav>
+      {<div id='demo-warning' className='important'>Function disabled in demo</div>}
+      <NavBar db = { db } highlighted = {category}/>
       <div className='home-container'>
-        {category === 'activity' && <Activity db={ db }/> }
-        {category === 'location' && <Location db={ db }/> }
-        {category === 'interests' && <Interests db={ db }/> }
-        {category === 'pi' && <Pi db={ db }/> }
-        {category === 'instagram' && <Instagram db={ db }/> }
-        {category === 'google' && <Google db={ db }/> }
+        <div className='panel-container'>
+          {category === 'activity' && <Activity db={ db }/> }
+          {category === 'location' && <Location db={ db }/> }
+          {category === 'interests' && <Interests db={ db }/> }
+          {category === 'pi' && <Pi db={ db }/> }
+          {category === 'instagram' && <Instagram db={ db }/> }
+          {category === 'google' && <Google db={ db }/> }
+        </div>
       </div>
     </div>
   )
