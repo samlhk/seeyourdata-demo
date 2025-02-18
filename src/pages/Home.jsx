@@ -110,7 +110,7 @@ const Home = () => {
                   <ol>
                     <li>Go to <a href='https://takeout.google.com/' target='_blank'>Google Takeout (https://takeout.google.com/)</a> while logged in to your Google account</li>
 
-                    <li>Select data you want to download (please include <strong>Access log activity</strong>), then deselect <strong>Drive</strong> to reduce download size<br/><img src={require('../img/google1.png')} /></li>
+                    <li>Select data you want to download (please include all if possible for a comprehensive review), then deselect <strong>Drive</strong> to reduce download size<br/><img src={require('../img/google1.png')} /></li>
                     <li>Click <strong>Next Step</strong><br/><img src={require('../img/google2.png')} /></li>
                     <li>Select <strong>Transfer to: Send download link via email</strong> and <strong>Frequency: Export once</strong><br/><img src={require('../img/google3.png')} /></li>
                     <li>Select <strong>File type: .zip</strong>, <strong>File size: 1 GB</strong> and click <strong>Create export</strong><br/><img src={require('../img/google4.png')} /></li>
