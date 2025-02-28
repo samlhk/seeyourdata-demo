@@ -16,6 +16,10 @@ navbar {
   border-bottom: solid rgb(97, 97, 97) 3px;
 }
 
+.nav-btn {
+  display: none;
+}
+
 .nav-item {
   cursor: pointer;
   padding-bottom: 0;
@@ -41,6 +45,7 @@ navbar {
   margin: 1rem;
   padding: 1rem;
   position: relative;
+  overflow: auto;
 }
 
 li {
@@ -99,4 +104,28 @@ li {
 .filter-bar {
   display: flex;
   justify-content: space-between;
+}
+
+@media only screen and (max-width: 1200px) {
+  navbar {
+    flex-direction: column;
+  }
+
+  .nav-btn {
+    display: block;
+    margin: 1rem;
+    font-size: 2rem;
+  }
+
+  .display-none {
+    display: none;
+  }
+
+  .separator {
+    display: none;
+  }
+
+  .panel-container > * {
+    width: 95%;
+  }
 }

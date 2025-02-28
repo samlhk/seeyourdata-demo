@@ -9,10 +9,27 @@ const ActivityTrend = ({ db, colors, filterBar = true }) => {
   const [timeRange, setTimeRange] = useState(null);
   const [monthlyActivities, setMonthlyActivities] = useState(null);
   const [filteredApps, setFilteredApps] = useState(new Set());
+  const [smallScreen, setSmallScreen] = useState(false);
   
   useEffect(() => {
     render();
+    handleResize();
   }, [db, filteredApps])
+
+  useEffect(() => {
+    window.addEventListener("resize", handleResize);
+    return () => {
+        window.removeEventListener("resize", handleResize);
+    };
+  }, [])
+
+  const handleResize = () => {
+    if (window.innerWidth > 1200) {
+      setSmallScreen(false);
+    } else {
+      setSmallScreen(true);
+    }
+  };
 
   const render = async () => {
     if (db && db.activity) {
@@ -89,7 +106,10 @@ const ActivityTrend = ({ db, colors, filterBar = true }) => {
         }}>Clear Filter</button>
       </div>}
 
-      <Line data={{ labels: timeRange, datasets: monthlyActivities }}/>
+      <div className='line-container'>
+        <Line data={{ labels: timeRange, datasets: monthlyActivities }} options={{ maintainAspectRatio: !smallScreen }}/>
+      </div>
+      
     </div>: <></>
   )
 }

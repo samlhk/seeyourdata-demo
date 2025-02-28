@@ -62,3 +62,15 @@ td {
 textarea {
     width: 100%;
 }
+
+@media only screen and (max-width: 1200px) {
+    #chat-filter {
+        max-width: 50vw;
+        text-overflow: ellipsis;
+    }
+
+    .line-container {
+        height: 60vh;
+        position: relative;
+    }
+}
